@@ -1,11 +1,11 @@
 #include <iostream>
 
-int getNum()
+double getNum()
 {
 
 std::cout << "Enter your number:" << std::endl;
 
-int gnum;
+double gnum;
 std::cin>> gnum;
 return gnum;
 
@@ -23,28 +23,30 @@ int getOp()
 
 }
 
-int calcResult(int num1, int gop, int num2)
+double calcResult(double num1, int gop, double num2)
 {
+switch(gop)
+{
+    case 1:
+    return num1 + num2;
+    break;
 
-    if (gop == 1)
-        return (num1 + num2);
+    case 2:
+    return num1 - num2;
+    break;
 
-    if (gop == 2)
-        return (num1 - num2);
+    case 3:
+    return num1 * num2;
+    break;
 
-    if (gop == 3)
-        return (num1 * num2);
-
-    if (gop == 4)
-        return (num1 / num2);
-
+    case 4:
+    return num1 / num2;
+    break;
+}
     return 0;
-
 }
 
-void finalResult(int result)
+void finalResult(double result)
 {
-
     std::cout << "result = " << result << std::endl;
-
 }
