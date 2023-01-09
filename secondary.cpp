@@ -11,13 +11,12 @@ return gnum;
 
 }
 
-int getOp()
+char getOp()
 {
     
     std::cout << "Choose your operation" << std::endl;
-    std::cout << "(1.+; 2.-; 3.*; 4./):" << std::endl;
     
-    int gop;
+    char gop;
     std::cin>>gop;
     return gop;
 
@@ -27,19 +26,19 @@ double calcResult(double num1, int gop, double num2)
 {
 switch(gop)
 {
-    case 1:
+    case '+':
     return num1 + num2;
     break;
 
-    case 2:
+    case '-':
     return num1 - num2;
     break;
 
-    case 3:
+    case '*':
     return num1 * num2;
     break;
 
-    case 4:
+    case '/':
     return num1 / num2;
     break;
 }

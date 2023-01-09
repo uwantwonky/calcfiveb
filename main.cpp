@@ -6,7 +6,7 @@ int main()
 {
     double num1 = getNum();
 
-    int gop = getOp();
+    char gop = getOp();
 
     double num2 = getNum();
 
